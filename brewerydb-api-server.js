@@ -28,7 +28,7 @@ BreweryDBApi = {
       options.headers = options.headers || {};
       options.headers['HTTP_ACCEPT'] = 'application/json';
       options.params = options.params || {};
-      options.params['key'] = config.key;
+      options.params['key'] = brewerydb_config.key;
 
       try {
         result = HTTP.call(method, this._host + '/' + path, options);

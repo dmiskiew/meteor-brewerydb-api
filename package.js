@@ -1,7 +1,7 @@
 Package.describe({
   name: 'dmiskiew:brewerydb-api',
   summary: "A Meteor library to interact with Brewerydb's API",
-  version: '1.0.1',
+  version: '1.0.2',
   git: 'https://github.com/dmiskiew/brewerydb-api'
 });
 
@@ -23,13 +23,10 @@ Package.on_use(function (api, where) {
     ]);
   }
   
-  api.add_files([
-      'brewerydb-api-server.js'    // API methods implementation
-    ], 
-    ['server']
-  );
+  api.add_files(['brewerydb-api-server.js'], ['server']);
+  api.add_files(['brewerydb-api-client.js'], ['client']);
   
-  api.export('BreweryDBApi', ['server']);
+  api.export('BreweryDBApi');
 });
 
 Package.on_test(function (api) {
