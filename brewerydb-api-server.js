@@ -14,7 +14,7 @@ BreweryDBApi = {
     _.extend(brewerydb_config, config);
 
     initialized = true;
-  }
+  },
 
   // call a BreweryDB API Meteor.http function
   _call: function(method, path, options) {
@@ -49,4 +49,10 @@ _.each(httpVerbs, function(verb) {
   BreweryDBApi[verb.toLowerCase()] = function(path, options) {
     return this._call(verb, path, options);
   };
+});
+
+Meteor.methods({
+  'brewery-search': function(query) {
+    BreweryDBApi.get('search', {q: query})
+  }
 });
