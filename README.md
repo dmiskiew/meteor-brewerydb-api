@@ -15,12 +15,8 @@ To call the library, use the `get` and `post` functions.
 
 Example:
 ```
-BreweryDBApi.get('/your/api/path', options, callback);
+BreweryDBApi.get('/your/api/path', options);
 ```
-
-If `callback` is provided (client or server), the call will be made **asynchronously**. 
-
-On the client, if you do not provide a callback, the library will return a [Q promise](https://github.com/kriskowal/q). 
 On the server, it will run **synchronously**.
 
 # Contributions
