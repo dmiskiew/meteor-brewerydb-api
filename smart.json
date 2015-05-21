@@ -1,0 +1,11 @@
+{
+  "name": "brewerydb-api",
+  "description": "A wrapper around BreweryDB's API",
+  "homepage": "",
+  "author": "",
+  "version": "0.1.0",
+  "git": "",
+  "packages": {
+    "q": {}
+  }
+}
